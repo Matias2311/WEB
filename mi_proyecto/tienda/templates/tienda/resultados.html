@@ -1,0 +1,12 @@
+{% extends 'tienda/base.html' %}
+
+{% block title %}Resultados de la Búsqueda{% endblock %}
+
+{% block content %}
+<h2>Resultados de la Búsqueda</h2>
+<ul>
+    {% for producto in resultados %}
+    <li>{{ producto.nombre }} - {{ producto.descripcion }} - ${{ producto.precio }}</li>
+    {% endfor %}
+</ul>
+{% endblock %}

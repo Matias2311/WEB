@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}Tienda{% endblock %}</title>
+</head>
+<body>
+    <header>
+        <h1>Tienda en Línea</h1>
+        <nav>
+            <ul>
+                <li><a href="{% url 'index' %}">Inicio</a></li>
+                <li><a href="{% url 'registrar_cliente' %}">Registrar Cliente</a></li>
+                <li><a href="{% url 'registrar_producto' %}">Registrar Producto</a></li>
+                <li><a href="{% url 'registrar_pedido' %}">Registrar Pedido</a></li>
+                <li><a href="{% url 'buscar' %}">Buscar Producto</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        {% block content %}{% endblock %}
+    </main>
+</body>
+</html>
